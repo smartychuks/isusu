@@ -256,7 +256,7 @@ export default function Home() {
           </div>
 
           <footer className={styles.footer}>
-            Made with &#10084; by <a href="https://twitter.com/goldenchuks4" target = "_blank"> @iSmarty</a>
+            Made with &#10084; by <a href="https://twitter.com/goldenchuks4" target = "_blank" rel="noreferrer"> @iSmarty</a>
           </footer>
         </div>
       </div>
