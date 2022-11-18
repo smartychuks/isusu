@@ -158,7 +158,7 @@ export default function Home() {
     const onDisconnect = async () => {
       try {
         await web3ModalRef.current.clearCachedProvider();
-        provider = await getProviderOrSigner();
+        const provider = await getProviderOrSigner();
         provider = await web3ModalRef.current.clearCachedProvider();
         setWalletConnected(false);
         console.log("Disconnected");
@@ -247,7 +247,7 @@ export default function Home() {
             Coins are locked for a minimum of 1 minute, too soon? You can HODL longer using isusu
           </div>
           <div className={styles.description}>
-            {walletConnected ? renderConnect() : renderOnDisconnect}
+            {walletConnected ? renderConnect() : renderOnDisconnect()}
             <div>
               <br /><br /><br />
               {loading == true ? isLoading() : null}
@@ -256,7 +256,7 @@ export default function Home() {
           </div>
 
           <footer className={styles.footer}>
-            Made with &#10084; by <a href="https://twitter.com/goldenchuks4" target = "_blank"> @iSmarty</a>
+            Made with &#10084; by <a href="https://twitter.com/goldenchuks4" target = "_blank" rel="noreferrer"> @iSmarty</a>
           </footer>
         </div>
       </div>
